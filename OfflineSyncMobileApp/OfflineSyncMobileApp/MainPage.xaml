@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="OfflineSyncMobileApp.MainPage">
+
+    <StackLayout Margin="5">
+        <Editor x:Name="txtOut"
+                TextColor="Black" 
+                FontSize="Small"
+                IsReadOnly="True" 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="WhiteSmoke">
+        </Editor>
+        
+        <ActivityIndicator  IsVisible="false" 
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" 
+                            IsRunning="True"
+                            Color="BlueViolet"
+                            BackgroundColor="Transparent"
+                            x:Name="busyIndi">
+            
+        </ActivityIndicator>
+
+       
+        <Entry  x:Name="txtvalue"
+                VerticalOptions="End" 
+                Placeholder="Enter value">
+        </Entry>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnSave"
+                Clicked="btnSave_Clicked"
+                WidthRequest="150"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="End" 
+                Text="Save to DB">
+
+            </Button>
+            <Button x:Name="btnReadDB"
+                Clicked="btnReadDB_Clicked"
+                WidthRequest="150"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="End" 
+                Text="Read from DB">
+
+            </Button>
+            
+        </StackLayout>
+        
+
+        <Button 
+            x:Name="btnSync" 
+            Clicked="btnSync_Clicked" 
+            Text="Sync with Server" 
+            HorizontalOptions="CenterAndExpand" 
+            WidthRequest="250" 
+            VerticalOptions="End" 
+            Margin="0,0,0,20">
+        </Button>
+        
+    </StackLayout>
+
+</ContentPage>
