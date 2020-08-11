@@ -84,8 +84,6 @@ namespace OfflineSyncMobileApp
 
                 busyIndi.IsVisible = false;
             }
-
-
         }
 
 
